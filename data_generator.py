@@ -25,9 +25,9 @@ def generate_synthetic_data(num_samples=10):
                 found = True
             elif found and (
                 name.split()[-1] in word or word == name.split()[-1]
-                ):
-                    tags.append('I-ENTITY')
-                    found = False
+            ):
+                tags.append('I-ENTITY')
+                found = False
             else:
                 tags.append('O')
         data.append((words, tags))
