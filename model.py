@@ -14,9 +14,8 @@ def build_model(input_dim, output_dim, input_length):
     )(x)
     model = models.Model(inputs, outputs)
     model.compile(
-        optimizer='adam', 
-        loss='sparse_categorical_crossentropy', 
+        optimizer='adam',
+        loss='sparse_categorical_crossentropy',
         metrics=['accuracy']
     )
     return model
-

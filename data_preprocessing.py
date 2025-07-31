@@ -28,4 +28,3 @@ def encode_data(data, word2idx, tag2idx, max_len=20):
     X = pad_sequences(X, maxlen=max_len, padding='post', value=word2idx['PAD'])
     y = pad_sequences(y, maxlen=max_len, padding='post', value=tag2idx['O'])
     return X, y
-    

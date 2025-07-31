@@ -39,4 +39,3 @@ if __name__ == "__main__":
     data = generate_synthetic_data(3)
     for sent, tags in data:
         print(list(zip(sent, tags)))
-        
