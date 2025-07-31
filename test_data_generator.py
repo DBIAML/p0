@@ -14,4 +14,3 @@ def test_data_generation():
 if __name__ == "__main__":
     test_data_generation()
     print("Test passed!")
-

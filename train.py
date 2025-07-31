@@ -10,14 +10,13 @@ def main():
     data = generate_synthetic_data(300)
     # Construction des vocabulaires
     word2idx, tag2idx = build_vocab(data)
-    idx2tag = {i: t for t, i in tag2idx.items()}
     max_len = 20
     # Encodage des données
     X, y = encode_data(data, word2idx, tag2idx, max_len)
     # Construction du modèle
     model = build_model(
-        input_dim=len(word2idx), 
-        output_dim=len(tag2idx), 
+        input_dim=len(word2idx),
+        output_dim=len(tag2idx),
         input_length=max_len
     )
     # Entraînement
@@ -30,4 +29,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

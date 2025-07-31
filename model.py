@@ -1,8 +1,6 @@
 # model.py
 
-import tensorflow
 from tensorflow.keras import layers, models
-
 
 
 def build_model(input_dim, output_dim, input_length):

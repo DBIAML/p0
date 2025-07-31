@@ -20,7 +20,7 @@ def build_vocab(data):
 def encode_data(data, word2idx, tag2idx, max_len=20):
     # On encode les mots et les tags en indices numériques
     X = [
-        [word2idx.get(w, word2idx['UNK']) for w in words] 
+        [word2idx.get(w, word2idx['UNK']) for w in words]
         for words, tags in data
     ]
     y = [[tag2idx[t] for t in tags] for words, tags in data]
@@ -28,5 +28,4 @@ def encode_data(data, word2idx, tag2idx, max_len=20):
     X = pad_sequences(X, maxlen=max_len, padding='post', value=word2idx['PAD'])
     y = pad_sequences(y, maxlen=max_len, padding='post', value=tag2idx['O'])
     return X, y
-
     
